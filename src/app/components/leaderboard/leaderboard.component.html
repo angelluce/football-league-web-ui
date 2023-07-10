@@ -1,0 +1,23 @@
+<div class="content-container">
+  <div class="inside-container">
+    <h1 class="title-container">League Standings</h1>
+    <table>
+      <thead>
+      <tr class="bg-table">
+        <th *ngFor="let col of cols" [class]="'th-' + col.field">{{ col.header }}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let team of dataStandings">
+        <td [class]="'team'">
+          <img src="https://flagsapi.codeaid.io/{{ team.team}}.png" width="53px" height="37px">
+          {{ team.team }}</td>
+        <td [class]="'cell played'">{{ team.played }}</td>
+        <td [class]="'cell goalsFor'">{{ team.goalsFor }}</td>
+        <td [class]="'cell goalsAgainst'">{{ team.goalsAgainst }}</td>
+        <td [class]="'cell points'">{{ team.points }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

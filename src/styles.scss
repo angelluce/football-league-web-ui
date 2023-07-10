@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+}
+
+.h-60 {
+  height: 60px;
+  padding: 0 40px;
+  background-color: #025FEB;
+}
+
+.ps-40 {
+  padding-left: 40px;
+  margin: 0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.inside-container {
+  width: 90vw;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.title-container {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+thead tr, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #4B5C68;
+  background-color: #E4EDF2;
+  border: #E4EDF2 solid 1px;
+}
+
+td {
+  height: 70px;
+  padding: 0 10px;
+  color: #4B5C68;
+  border-top: #F6F7F7 solid 1px;
+}
+
+.odd {
+  background-color: #F6F7F7;
+}
+
+.matchDate, .th-matchDate {
+  width: 20%;
+  text-align: end;
+}
+
+.stadium, .th-stadium {
+  width: 30%;
+  text-align: start;
+}
+
+.homeTeam, .th-homeTeam {
+  width: 20%;
+  text-align: end;
+}
+
+.result, .th-result {
+  width: 10%;
+  text-align: center;
+}
+
+.awayTeam, .th-awayTeam {
+  width: 20%;
+  text-align: start;
+}
+
+.team, .th-team {
+  width: 50%;
+  text-align: start;
+  padding: 0 10px;
+}
+
+.played, .th-played, .goalsFor, th-goalsFor, .goalsAgainst, th-goalsAgainst, .points, th-points {
+  width: 12%;
+  text-align: center;
+}
+
+.f-40 {
+  height: 40px;
+  padding: 0 40px;
+  color: #4B5C68;
+  background-color: #F6F7F7;
+}
+
+.font-menu {
+  font-size: 16px;
+  color: #FFFFFF;
+
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+
+.matchDate, .stadium, .played, .goalsFor, .goalsAgainst {
+  font-size: 14px;
+}
+
+.team, .points, .homeTeam, .awayTeam, .result {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (max-width: 999px) {
+  .stadium {
+    display: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .matchDate,
+  .stadium {
+    display: none;
+  }
+}

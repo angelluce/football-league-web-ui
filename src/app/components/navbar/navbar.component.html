@@ -1,0 +1,10 @@
+<nav class="navbar h-60">
+  <div class="container-fluid p-0">
+    <img src="assets/images/logo.svg" width="110px">
+    <div class="d-flex">
+      <a *ngFor="let item of navbarItems" class="nav-link font-menu ps-40" href="{{item.path}}">
+        <img src="{{item.icon}}" width="25px" height="25px">
+        {{item.label}}</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+<div class="content-container">
+  <div class="inside-container">
+    <h1 class="title-container">League Schedule</h1>
+    <div class="table-container">
+      <table>
+        <thead>
+        <tr class="bg-table">
+          <th *ngFor="let col of cols" [class]="'th-' + col.field">{{ col.header }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let match of dataMatches; let even = even">
+          <tr [class.even]="even" [class.odd]="!even">
+            <td [class]="'matchDate'">{{ match.matchDate | date: 'd.M.YYYY hh:mm' }}</td>
+            <td [class]="'stadium'">{{ match.stadium }}</td>
+            <td [class]="'homeTeam'">{{ match.homeTeam }}
+              <img src="https://flagsapi.codeaid.io/{{match.homeTeam}}.png" width="53px" height="37px">
+            </td>
+            <td [class]="'result'">
+          <span *ngIf="match.matchPlayed; else noMatchPlayed">
+                {{ match.homeTeamScore }} - {{ match.awayTeamScore }}
+              </span>
+              <ng-template #noMatchPlayed>- : -</ng-template>
+            </td>
+            <td [class]="'awayTeam'">
+              <img src="https://flagsapi.codeaid.io/{{match.awayTeam}}.png" width="53px" height="37px">
+              {{ match.awayTeam }}</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
